@@ -1,17 +1,17 @@
 <?php
-class alumno extends Persona {
-    private $curso;
-    private $turno;
-    private $aula;
+class alumno extends Persona
+{
+    private $persona;
+    private $curso = [];
+    private $condicion;
+    private $estado;
 
 
-    public function __constructor($curso, $turno, $aula){
-        $this->$curso = $curso; 
-        $this->$turno = $turno; 
-        $this->$aula = $aula; 
+    public function __constructor($persona, $curso, $condicion, $estado)
+    {
+        $this->$persona = $persona;
+        $this->$curso = $curso;
+        $this->$condicion = $condicion;
+        $this->$estado = $estado;
     }
-
-
-    
-
 }
