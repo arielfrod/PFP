@@ -1,5 +1,5 @@
 <?php
-class curso
+class Curso
 {
     private $pfp;
     private $aula;

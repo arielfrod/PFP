@@ -1,5 +1,5 @@
 <?php
-class profesor extends Persona
+class Profesor extends Persona
 {
     private $persona;
 
