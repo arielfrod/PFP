@@ -20,6 +20,46 @@ class Curso
         $this->$profesor = $profesor;
         $this->$alumnos = $alumnos;
     }
+ public function setPfp($pfp){ //setter, es un metodo que asigna informacion a un atributo existente
+    $this->pfp = $pfp;
+  }
+   
+ public function setAula($aula){
+    $this->aula = $aula;
+  }
+    
+ public function setTurno($turno){
+    $this->turno = $turno;
+  }
+    
+ public function setMinimo_alumno($minimo_alumno){
+    $this->minimo_alumno = $minimo_alumno;
+  }
+ public function setMaximo_alumno($maximo_alumno){
+    $this->maximo_alumno = $maximo_alumno;
+}
+public function setProfesor($profesor){
+    $this->profesor = $profesor;
+}
+public function setAlumnos($alumnos){
+    $this->alumnos = $alumnos;
+} 
+    //Getters - Son aquellos metodos que me permiten traer informacion del objeto
+public function getPersona(){
+    return $this->persona;
+}
+    
+    public function getCurso(){
+        return $this->curso;
+    }
+    
+    public function getCondicion(){
+        return $this->condicion;
+    }
+    
+    public function getEstado(){
+        return $this->estado;
+    }
 }
 
 /*
