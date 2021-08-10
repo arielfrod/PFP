@@ -1,4 +1,3 @@
-
 <!-- Crear un CRUD para los cursos de formacion profesional, donde podamos inscribir y registrar a los
 alumnos en los distintos cursos en BBDD-->
 <!-- front del CRUD -->

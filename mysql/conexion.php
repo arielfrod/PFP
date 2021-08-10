@@ -16,7 +16,7 @@ try {
         PDO::ATTR_ERRMODE,
         PDO::ERRMODE_EXCEPTION
     );
-    ////////////
+
 
     // $id = 2;
     // $respuesta = $conexiondb->prepare("SELECT * FROM persona where id=?  LIMIT 2");

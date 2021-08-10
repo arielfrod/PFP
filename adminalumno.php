@@ -3,16 +3,14 @@
 <?php require_once("head.php"); ?>
 
 <?php require_once("header.php"); ?>
-
-<?php if (isset($_SESSION['message'])) { ?>
-    <div class="alert alert-<?= $_SESSION['message_type'] ?> alert-dismissible fade show" role="alert">
-        <?= $_SESSION['message'] ?>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
+<<<<<<< HEAD <?php if (isset($_SESSION['message'])) { ?> <div class="alert alert-<?= $_SESSION['message_type'] ?> alert-dismissible fade show" role="alert">
+    <?= $_SESSION['message'] ?>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
     </div>
 <?php session_unset();
-} ?>
+                } ?>
 
 <center>
     <h1 class="mb-8">Administrador de Alumnos</h1>
@@ -104,5 +102,35 @@
         </div>
 
     </main>
-</center>
-<?php require_once("endofpage.php");
+    =======
+    <center>
+        <h1 class="mb-5">Panel admin Alumnos</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">DNI</th>
+                    <th scope="col" colspan="3">Cursos</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td rowspan="1"><button type="button" class="btn btn-secondary btn col-4">Modificar</button></td>
+                    <td rowspan="1"><button type="button" class="btn btn-danger btn col-4">Eliminar</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="row container">
+            <button type="button" class="btn btn-primary btn col-2">Agregar</button>
+        </div>
+
+        >>>>>>> 73618ea440891ac4b4bd1c17bc146e103e877ac3
+    </center>
+    <?php require_once("endofpage.php");
