@@ -3,14 +3,14 @@
 <?php require_once("head.php"); ?>
 
 <?php require_once("header.php"); ?>
-<<<<<<< HEAD <?php if (isset($_SESSION['message'])) { ?> <div class="alert alert-<?= $_SESSION['message_type'] ?> alert-dismissible fade show" role="alert">
-    <?= $_SESSION['message'] ?>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-    </button>
+<?php if (isset($_SESSION['message'])) { ?> <div class="alert alert-<?= $_SESSION['message_type'] ?> alert-dismissible fade show" role="alert">
+        <?= $_SESSION['message'] ?>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
     </div>
 <?php session_unset();
-                } ?>
+} ?>
 
 <center>
     <h1 class="mb-8">Administrador de Alumnos</h1>
@@ -43,9 +43,6 @@
                         <div class="form-group">
                             <input type="text" name="estado" class="form-control" placeholder="Estado">
                         </div>
-                        <div class="form-group">
-                            <textarea name="descripcion" rows="2" class="form-control" placeholder="Descripcion"></textarea>
-                        </div>
                         <input type="submit" name="guardar_alumno" class="btn btn-success btn-block" value="Guardar Alumno">
                     </form>
                 </div>
@@ -61,7 +58,6 @@
                             <th>Edad</th>
                             <th>Direccion</th>
                             <th>Telefono</th>
-                            <th>Descripcion</th>
                             <th>Condicion</th>
                             <th>Estado</th>
                             <th>Accion</th>
@@ -73,7 +69,9 @@
 
 
                         $sql = 'SELECT * FROM persona inner join alumno on persona.id = alumno.persona_id';
-                        foreach ($conexiondb->query($sql) as $row) {
+                        $resultado = mysqli_query($conexion, $sql);
+
+                        while ($row = mysqli_fetch_assoc($resultado)) {
 
                         ?>
                             <tr>
@@ -83,7 +81,6 @@
                                 <td><?php echo $row['edad']; ?></td>
                                 <td><?php echo $row['direccion']; ?></td>
                                 <td><?php echo $row['telefono']; ?></td>
-                                <td><?php echo $row['descripcion']; ?></td>
                                 <td><?php echo $row['condicion']; ?></td>
                                 <td><?php echo $row['estado']; ?></td>
                                 <td>
@@ -102,35 +99,5 @@
         </div>
 
     </main>
-    =======
-    <center>
-        <h1 class="mb-5">Panel admin Alumnos</h1>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">DNI</th>
-                    <th scope="col" colspan="3">Cursos</th>
-                </tr>
 
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td rowspan="1"><button type="button" class="btn btn-secondary btn col-4">Modificar</button></td>
-                    <td rowspan="1"><button type="button" class="btn btn-danger btn col-4">Eliminar</button></td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div class="row container">
-            <button type="button" class="btn btn-primary btn col-2">Agregar</button>
-        </div>
-
-        >>>>>>> 73618ea440891ac4b4bd1c17bc146e103e877ac3
-    </center>
     <?php require_once("endofpage.php");
